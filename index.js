@@ -37,7 +37,10 @@ app.post('/webhook', (req, res) => {
   res.status(200).send('EVENT_RECEIVED');
 
   const body = req.body;
-
+  console.log(
+              'The JSON Recieved: ',
+              body
+            );
   if (body.object === 'page') {
       // Iterate over each entry
       // There may be multiple if batched
