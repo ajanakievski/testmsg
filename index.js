@@ -41,6 +41,7 @@ app.post('/webhook', (req, res) => {
               'The JSON Recieved: ',
               body
             );
+  console.log('request =' + JSON.stringify(body));
   if (body.object === 'page') {
       // Iterate over each entry
       // There may be multiple if batched
